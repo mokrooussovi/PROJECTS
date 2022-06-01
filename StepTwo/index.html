@@ -4,19 +4,82 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Working on the Project part #2</title>
+    <title>Home</title>
     <!-- CSS Section -->
-    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.min.css">
     <link rel="stylesheet" href="./Content/app.css">
 </head>
 <body>
-    <div class="container">
-        <h1><i class="fas fa-regular fa-rocket"></i> Welcome to Project Part 2!</h1>
-    </div>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="index.html"><i class="fas fa-regular fa-rocket"></i> Project Site</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html"><i class="fas fa-home"></i> Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="products.html"><i class="fas fa-project-diagram"></i> Products</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="services.html"><i class="fas fa-map-signs"></i> Services</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="about.html"><i class="fas fa-info"></i> About Us</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="contact.html"><i class="fas fa-envelope"></i> Contact Us</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+    </header>
+
+    <main class="mainContainer">
+      <h1 class="mb-5"><i class="fas fa-solid fa-satellite"></i> Welcome to Our Site!</h1>
+      <div class="container" id="homepage">
+        <img id="site-img" src="./Assets/view5.png" alt="Photo by Ivan Mokrooussov">
+        <hr/>
+        <button id="AboutUsButton" class="btn btn-primary">Learn more About Us!</button>
+        <button id="OurServicesButton" type="button" class="btn btn-secondary">Services</button>
+        <button id="ContactUsButton" type="button" class="btn btn-primary">Contact Us</button>
+      </div>
+    </main>
+
+    <main class="container">
+      <h1 class="mb-5"><i class="fas fa-solid fa-meteor"></i> JavaScript Event Handling!</h1>
+    
+  </main>
+
+  <div class="container">
+    <img id="site-img" src="./Assets/view5.png" alt="Photo by Ivan Mokrooussov">
+    
+    <button id="AboutUsButton" type="button" class="btn btn-primary">Learn more About Us!</button>
+    <button id="OurServicesButton" type="button" class="btn btn-secondary">Services</button>
+    <button id="ContactUsButton" type="button" class="btn btn-primary">Contact Us</button>
+  </div>
+ 
+
+
+    <nav class="navbar fixed-bottom navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"> &copy CopyRight 2022</a>
+      </div>
+    </nav>
+
+ 
+    
     <!-- Scripting Section -->
     <script src="./node_modules/jquery/dist/jquery.min.js"></script>
     <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="./Scripts/app.js"></script>
+
+ 
 </body>
 </html>
