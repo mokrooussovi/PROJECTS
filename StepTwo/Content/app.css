@@ -25,14 +25,17 @@ main {
    width: 100%;
 }
 
-
 #homepage {
    text-align: center;
 }
 
+#aboutuspage {
+   text-align: center;
+}
+
 .col, .col-about {
-   float:left;
-   width: 50%;
+   float: left;
+   width: 40%;
    padding: 5px;
    text-align: center;
    
@@ -78,6 +81,12 @@ img {
 #ivan_portrait {
    max-width: 200px;
    max-height: 300px;
+   margin: 20px;
+}
+
+#ivan_resume {
+   max-width: 60%;
+   max-height: 80%;
    margin: 20px;
 }
 
