@@ -4,6 +4,29 @@
 {
     function DisplayHomePage()
     {
+        // next three buttons allow us to redirect homepage into AboutUs, Services, and Contact pages
+        let AboutUsButton = document.getElementById("AboutUsButton");
+        console.log(AboutUsButton);
+        AboutUsButton.addEventListener("click", function()
+        {
+            location.href = "about.html";
+        });
+
+        let OurServicesButton = document.getElementById("OurServicesButton");
+        console.log(OurServicesButton);
+        OurServicesButton.addEventListener("dblclick", function()
+        {
+            location.href = "services.html";
+        });
+
+        let ContactUsButton = document.getElementById("ContactUsButton");
+        console.log(ContactUsButton);
+        ContactUsButton.addEventListener("mouseover", function()
+        {
+            location.href = "contact.html";
+        });
+
+
 
         // Variable for text content to be displayed on page
         let welcomeParagraph = [`Welcome to the site!\n
@@ -37,7 +60,25 @@
         
     }
 
- 
+    function DisplayProductsPage()
+    {
+        console.log("Products Page");
+    }
+
+    function DisplayServicesPage()
+    {
+        console.log("Services Page");
+    }
+
+    function DisplayAboutPage()
+    {
+        console.log("About Page");
+    }
+
+    function DisplayContactPage()
+    {
+        console.log("Contact Page");
+    }
 
     // named function option
     function Start()
@@ -51,7 +92,18 @@
             case "Home":
                 DisplayHomePage();
                 break;
- 
+            case "Our Products":
+                DisplayProductsPage();
+                break;
+            case "Our Services":
+                DisplayServicesPage();
+                break;
+            case "About Us":
+                DisplayAboutPage();
+                break;
+            case "Contact Us":
+                DisplayContactPage();
+                break;
         }
        
     }
