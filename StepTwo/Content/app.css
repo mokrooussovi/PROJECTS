@@ -6,10 +6,10 @@ body {
 
 
 div.container {
-    width: 100%;
+    width: 90%;
     background-color: rgba(126, 181, 230, 0.9);
-    border:5%;
-    padding: 20px, 20px, 20px, 20px;
+    border: 5%;
+    padding: 20px;
     opacity: 0.7;
     box-shadow: 0 4px 8px rgba(19, 18, 14, 0.945), 0 6px 20px 0 rgba(19, 18, 14, 0.19);
     border: 1px;

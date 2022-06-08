@@ -6,33 +6,34 @@
     {
 
         // Variable for text content to be displayed on page
-        let paragraph1 = [`Welcome to our site!\n
+        let welcomeParagraph = [`Welcome to the site!\n
                     The website demonstrates Live Site setup and DOM Manipulation \.\n
                     Let\`s start!\n`];
-        let pageHeader = `Welcome Message:`;
-        let titlePage = `Welcome to Group3 Lab 1 Site!`;
+        let homePageHeader = `Content:  `;
+        let homePageTitle = `Creating, insertion, or deletion elements!`;
 
         console.log("Home Page");
  
-
-        // TO-DO: adjust to insert into div w/in main instead of outside (maybe...)
-        // Target the main element to start inserting new content in
+         //Step 1. Get an entry point (insertion / deletion point) reference
         let MainContent = document.body.getElementsByClassName('container')[0];
         let ImgContent = document.body.getElementsByTagName('img')[0];
 
-        // Create a new paragraph element to insert text in
-        let ParaOne = document.createElement("p");
-        ParaOne.setAttribute("id", "ParaOne");
-        ParaOne.setAttribute("class", "mt-3");
+        //Step 2. create an element to insert
+        let WelcomeParagraphElement = document.createElement("p");
+        WelcomeParagraphElement.setAttribute("id", "WelcomeParagraphElement");
+        WelcomeParagraphElement.setAttribute("class", "mt-3");
         
-        // Build the paragraph by adding the string array together
-        ParaOne.textContent = paragraph1;
-        ParaOne.innerHTML += ParaOne.textContent;
+        //Step 3. configure the new element
+        WelcomeParagraphElement.textContent = welcomeParagraph;
+        //WelcomeParagraphElement.innerHTML += WelcomeParagraphElement.textContent;
 
-        // Insert new elements onto document
-        MainContent.insertBefore(ParaOne, ImgContent);
-        SetTitle(titlePage, MainContent);
-        SetHeading(pageHeader, MainContent);
+        //Step 4. Add / Insert the new element or To Insert before
+        MainContent.insertBefore(WelcomeParagraphElement, ImgContent);
+        //SetTitle(homePageTitle, MainContent);
+        //SetHeading(homePageHeader, MainContent);
+        WelcomeParagraphElement.before(homePageHeader);
+        WelcomeParagraphElement.before(homePageTitle);
+
         
     }
 
