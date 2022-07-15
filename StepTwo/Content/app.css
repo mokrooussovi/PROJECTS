@@ -18,7 +18,7 @@ div.container {
 }
 
 p {
-   text-align: left;
+   text-align: center;
 }
 
 main {
@@ -74,8 +74,9 @@ img {
 }
 
 #site-img {
-   max-width: 60%;
-   max-height: 50%;
+   max-width: 500px;
+   max-height: 600px;
+   position: relative;
 }
 
 #ivan_portrait {
@@ -96,7 +97,7 @@ h1 {
 }
 
 h3 {
-   text-align: left;
+   text-align: center;
 }
 
 a {

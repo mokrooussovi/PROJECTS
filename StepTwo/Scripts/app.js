@@ -16,8 +16,7 @@
     {
         // Variable for text content to be displayed on page
         let welcomeParagraph = [`Welcome to the site!\n
-        The website demonstrates Live Site setup and DOM Manipulation.\n
-        Let\`s start!\n`];
+        The website demonstrates Live Site setup and DOM Manipulation.\n`];
         let homePageHeader = `Content:  `;
         let homePageTitle = `Creating, insertion, or deletion elements!`;
 
@@ -31,17 +30,23 @@
         let WelcomeParagraphElement = document.createElement("p");
         WelcomeParagraphElement.setAttribute("id", "WelcomeParagraphElement");
         WelcomeParagraphElement.setAttribute("class", "mt-3");
+
+        let HomePageHeaderElement = document.createElement('h3');
+        let HomePageTitleElement = document.createElement('h4');
         
         //Step 3. configure the new element
         WelcomeParagraphElement.textContent = welcomeParagraph;
         //WelcomeParagraphElement.innerHTML += WelcomeParagraphElement.textContent;
+        HomePageHeaderElement.textContent = homePageHeader;
+        HomePageTitleElement.textContent = homePageTitle;
 
         //Step 4. Add / Insert the new element or To Insert before
         MainContent.insertBefore(WelcomeParagraphElement, ImgContent);
         //SetTitle(homePageTitle, MainContent);
         //SetHeading(homePageHeader, MainContent);
-        WelcomeParagraphElement.before(homePageHeader);
-        WelcomeParagraphElement.before(homePageTitle);
+        //WelcomeParagraphElement.before(homePageHeader);
+        WelcomeParagraphElement.before(HomePageHeaderElement);
+        WelcomeParagraphElement.before(HomePageTitleElement);
 
     }
 
@@ -68,6 +73,73 @@
         {
             location.href = "contact.html";
         });
+
+
+        let BtnImageFageOut =document.getElementById('btnImageFageOut');
+        console.log(BtnImageFageOut);
+        $(document).ready(function(){
+            $('#btnImageFageOut').click(function(){
+                $('#site-img').fadeOut(3000, function(){
+                    $('#btnImageFageOut').text('Image is Gone!')
+                });
+            });
+            
+            $('#btnImageFageIn').click(function(){
+                $('#site-img').fadeIn(3000, function(){
+                    $('#btnImageFageOut').text('Image Can Be Tricky')
+                });
+            });
+
+            $('#btnImageSlideUp').click(function(){
+                $('#site-img').slideUp(3000, function(){
+                    $('#btnImageSlideUp').text('No more...')
+                });
+            });
+
+            $('#btnImageSlideDown').click(function(){
+                $('#site-img').slideDown(3000, function(){
+                    $('#btnImageSlideUp').text('Going Up')
+                });
+            });
+
+            $('#btnImageMoveRight').click(function(){
+                $('#site-img').animate({
+                    left: 300,
+                    height: '300px',
+                    width: '200px'
+                })
+            })
+
+            $('#btnImageMoveLeft').click(function(){
+                $('#site-img').animate({
+                    left: 0,
+                    height: '600px',
+                    width: '500px'
+                })
+            })
+
+            $('#btnImageMoveAround').click(function(){
+                var image = $('#site-img');
+                image.animate({
+                    left: 300,
+                    height: '200px',
+                    width: '200px'
+                });
+                image.animate({
+                    top: 200
+                });
+                image.animate({
+                    left: 0,
+                    top: 200
+                });
+                image.animate({
+                    left: 0,
+                    top: 0,
+                    height: '600px',
+                    width: '500px'
+                })
+            })
+        })
     }
 
     function DisplayProductsPage()
